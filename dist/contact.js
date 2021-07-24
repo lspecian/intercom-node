@@ -78,6 +78,11 @@ var Contact = /*#__PURE__*/function () {
     value: function search(params, f) {
       return this.client.post('/contacts/search', params, f);
     }
+  }, {
+    key: "unarchive",
+    value: function unarchive(params, f) {
+      return this.client.post("/contacts/".concat(params.id, "/unarchive"), params, f);
+    }
   }]);
 
   return Contact;
